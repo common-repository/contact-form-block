@@ -1,0 +1,27 @@
+Have you ever received emails from your WordPress install? If yes, it should be fine. If no, it is possible that your install actually can't sent emails as it is. In that case, the easiest thing is to use a plugin such as Post SMTP Mailer (https://wordpress.org/plugins/post-smtp/). I recommend using it with Mailgun (this service is free up to 10,000 emails / month).
+
+= Filters
+- mcf_email_subject: Modify the subject of the emails
+- mcf_email_content: Modify the content of the emails
+- mcf_email_to: Modify the receiver of the emails
+- mcf_form_html: Modify the form HTML
+
+By default, the e-mail will be sent to the admin of the website (Settings > General > Email address). By default, the e-mail will look like this.
+
+FROM: *email*
+SUBJECT: [*site*] Message from *name*
+CONTENT: *message*
+
+You can override this by using the filters 'mcf_email_subject' and 'mcf_email_content'. If you would like someone else to receive that e-mail, you can override it by using the filter 'mcf_email_to'.
+
+= Validations
+
+mcf_validate, error, ...
+
+= Actions
+
+...
+
+= Fields
+
+In the form, all the fields' names should start with 'mcfb_'. Otherwise, an 404 error might occur: https://www.infinitypp.com/wordpress/easily-fix-wordpress-post-request-wont-return-return-404-form-submission/.

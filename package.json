@@ -1,0 +1,31 @@
+{
+  "name": "contact-form-block",
+  "version": "0.3.5",
+  "description": "Contact Form Block",
+  "private": true,
+  "author": "Meow Apps",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "webpack --watch --mode development",
+    "build": "webpack --mode production",
+    "analysis": "webpack --mode production --env.analysis='true'",
+    "7zip": "7z a -tzip ../zip/contact-form-block.zip . -x!node_modules/ -x!.git/ -x!logs/*"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.40.0",
+    "react": "^18.0.0",
+    "styled-components": "^6.0.0",
+    "swr": "^1.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "babel-loader": "^9.1.3",
+    "eslint": "^8.49.0",
+    "eslint-config-defaults": "^9.0.0",
+    "webpack": "^5.0.0",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
